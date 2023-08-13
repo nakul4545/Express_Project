@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Here student is array of object studentsData [{ studentRollno: '34', studentName: 'Nakul', studentAge: '24' },
+        { studentRollno: '30', studentName: 'Sakshi', studentAge: '23' }]-->
+    <!--for(let i of studentsData ) { 
+        <h1>Student Rollno is < the next syntax u can refer rollno.ejs or u know i.studentRollno  </h1>
+        <h1>Student Name is < i.studentName  </h1>
+        <h1>Student Age is  i.studentAge  </h1>
+        <hr>
+      } -->
+     <!--  Instead of displaying data of all the students in this file we only display the names where we can click -->
+    <% for(let i of studentsData ) { %>
+        <!-- <a href="/display/student/8"><h1> i.studentName </h1></a>  this will always point to sakshi  --> 
+        <a href="/display/student/<%= i.studentRollno %>"><h1><%= i.studentName %></h1></a> 
+        <hr>
+    <% } %>
+     
+</body>
+</html>
